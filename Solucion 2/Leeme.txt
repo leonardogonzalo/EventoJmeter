@@ -1,0 +1,4 @@
+Descomprimir el zip
+luego copiar los 2 archivos que se muestra en la imagen ima1.png
+luego copia esos archivos en la siguiente ruta de jmeter:
+<Unicación de tu jmeter>\apache-jmeter-5.2.1\lib
