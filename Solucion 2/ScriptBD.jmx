@@ -40,7 +40,7 @@
             </elementProp>
             <elementProp name="bduser" elementType="Argument">
               <stringProp name="Argument.name">bduser</stringProp>
-              <stringProp name="Argument.value">$(__P(USERBD,test)}</stringProp>
+              <stringProp name="Argument.value">${__P(USERBD,test)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="basedatos" elementType="Argument">
@@ -73,7 +73,7 @@
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Query1" enabled="true">
           <stringProp name="dataSource">_pool</stringProp>
           <stringProp name="query">SELECT * FROM user_details WHERE FIRST_NAME=?</stringProp>
-          <stringProp name="queryArguments">david</stringProp>
+          <stringProp name="queryArguments">${__P(FIRST_NAME,david)}</stringProp>
           <stringProp name="queryArgumentsTypes">varchar</stringProp>
           <stringProp name="queryTimeout">10000</stringProp>
           <stringProp name="queryType">Prepared Select Statement</stringProp>
@@ -86,7 +86,7 @@
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Query2" enabled="true">
           <stringProp name="dataSource">_pool</stringProp>
           <stringProp name="query">SELECT USERNAME FROM user_details WHERE FIRST_NAME=? AND GENDER=?</stringProp>
-          <stringProp name="queryArguments">david,Male</stringProp>
+          <stringProp name="queryArguments">${__P(FIRST_NAME_2,david)},${__P(GENDER,Male)}</stringProp>
           <stringProp name="queryArgumentsTypes">varchar,varchar</stringProp>
           <stringProp name="queryTimeout">10000</stringProp>
           <stringProp name="queryType">Prepared Select Statement</stringProp>
@@ -99,7 +99,7 @@
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Query3" enabled="true">
           <stringProp name="dataSource">_pool</stringProp>
           <stringProp name="query">SELECT USERNAME,LAST_NAME FROM user_details WHERE PASSWORD=?</stringProp>
-          <stringProp name="queryArguments">b6d7044f51097af805a29408ab2aa895</stringProp>
+          <stringProp name="queryArguments">${__P(PASSWORD,b6d7044f51097af805a29408ab2aa895)}</stringProp>
           <stringProp name="queryArgumentsTypes">varchar</stringProp>
           <stringProp name="queryTimeout">10000</stringProp>
           <stringProp name="queryType">Prepared Select Statement</stringProp>
