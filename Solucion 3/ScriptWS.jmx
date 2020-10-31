@@ -18,7 +18,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(USER,1)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -53,17 +53,17 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="ValueSumaNum1" elementType="Argument">
               <stringProp name="Argument.name">ValueSumaNum1</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">${__P(SUMNUMERO1,1)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="ValueSumaNum2" elementType="Argument">
               <stringProp name="Argument.name">ValueSumaNum2</stringProp>
-              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.value">${__P(SUMNUMERO2,2)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="ValueMultiNum1" elementType="Argument">
               <stringProp name="Argument.name">ValueMultiNum1</stringProp>
-              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.value">${__P(MULTINUMERO1,2)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -102,7 +102,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Obtiene resultado de la suma" enabled="true">
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Obtener resultado de la suma" enabled="true">
             <stringProp name="RegexExtractor.useHeaders">false</stringProp>
             <stringProp name="RegexExtractor.refname">v_result_add</stringProp>
             <stringProp name="RegexExtractor.regex">&lt;AddResult&gt;(.*?)&lt;/AddResult&gt;</stringProp>
@@ -153,18 +153,6 @@
             <stringProp name="RegexExtractor.default">-1</stringProp>
             <stringProp name="RegexExtractor.match_number"></stringProp>
           </RegexExtractor>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="1598">20</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message">El resultado no es el esperado</stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">8</intProp>
-            <stringProp name="Assertion.scope">variable</stringProp>
-            <stringProp name="Scope.variable">v_result_mult</stringProp>
-          </ResponseAssertion>
           <hashTree/>
         </hashTree>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
