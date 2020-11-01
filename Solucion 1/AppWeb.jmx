@@ -1277,10 +1277,27 @@
             <hashTree/>
           </hashTree>
         </hashTree>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="RecordingTest" enabled="true"/>
+        <hashTree/>
       </hashTree>
       <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
         <stringProp name="ProxyControlGui.port">9090</stringProp>
-        <collectionProp name="ProxyControlGui.exclude_list"/>
+        <collectionProp name="ProxyControlGui.exclude_list">
+          <stringProp name="40255937">*.bmp</stringProp>
+          <stringProp name="40273580">*.txt</stringProp>
+          <stringProp name="40272574">*.swf</stringProp>
+          <stringProp name="40262353">*.ico</stringProp>
+          <stringProp name="40269413">*.png</stringProp>
+          <stringProp name="1248055187">*.font</stringProp>
+          <stringProp name="1248561372">*.woff</stringProp>
+          <stringProp name="1298829">*.js</stringProp>
+          <stringProp name="40260608">*.gif</stringProp>
+          <stringProp name="40273442">*.ttf</stringProp>
+          <stringProp name="1248175020">*.jpeg</stringProp>
+          <stringProp name="40273455">*.tts</stringProp>
+          <stringProp name="40257087">*.css</stringProp>
+          <stringProp name="50696918">*.woff2</stringProp>
+        </collectionProp>
         <collectionProp name="ProxyControlGui.include_list"/>
         <boolProp name="ProxyControlGui.capture_http_headers">true</boolProp>
         <intProp name="ProxyControlGui.grouping_mode">1</intProp>
